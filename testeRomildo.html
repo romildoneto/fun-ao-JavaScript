@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get" id="formulario">
+          Nº 1: <input type="number" name="numero1" id="numero1" /><br/>
+          Nº 2: <input type="number" name="numero2" id="numero2"  /><br/><br/>
+          <button onclick="somar()">Somar</button>   
+          <hr/>
+          <p>Resultado:</p><p id="valorResultado"> -- </p>     
+          
+    </form>
+    <script>
+    		function somar(){
+				let numero1 = document.getElementById("numero1").value // pega o valor direto do id
+				let numero2 = document.getElementsByTagName("input")[1].value // pega o valor das Tags inputs 
+          
+				let convertNumero1 = parseInt(numero1) // converte tipo String para tipo inteiro
+				let convertNumero2 = parseInt(numero2)
+          
+				console.log(convertNumero1+convertNumero2) 
+																								  // retorna p/ id
+				let resultado = document.getElementById("valorResultado").innerHTML = convertNumero1+convertNumero2 
+						  
+        }
+    </script>
+</body>
+</html>
