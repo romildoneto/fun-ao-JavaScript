@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Stylo do elemento -->
+    <style>
+        #quadro{
+            width: 100px;
+            height: 100px;
+            border: none;
+            background-color: red;
+            border-radius: 100%;
+        }
+    </style>
+  </head>
+  <body>
+
+    <!-- Elemento a ser manipulado -->
+    <div id="quadro" style="display: none;"></div>
+    <!-- Botão ou link que irá chamar a função -->
+    <a id="btn" href="#" onclick="btnDiv('quadro')">Abrir|Fechar</a>
+
+    <script>
+        //Função que irá alterar o estado do elemento
+        function btnDiv(x) {
+            //Pega a propriedade display do elemento e armazena na variável
+            let display = document.getElementById(x).style.display;
+            //Valida o estado da propriedade display do elemento
+            if(display == "none"){
+                //Muda a propriedade display do elemento para "block";
+                document.getElementById(x).style.display="block";
+            }else{
+                //Muda a propriedade display do elemento para "none";
+                document.getElementById(x).style.display="none";
+            }
+            console.log(display)
+        }
+    </script>
+
+  </body>
+</html>
